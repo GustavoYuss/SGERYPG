@@ -1,12 +1,12 @@
-package mx.uv.fei.Logic;
+package mx.uv.fei.DataAccess;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
-import mx.uv.fei.DataAccess.DataBaseManager;
+import mx.uv.fei.Logic.IPreProject;
+import mx.uv.fei.Logic.PreProject;
 
 public class PreProjectDAO implements IPreProject {
     

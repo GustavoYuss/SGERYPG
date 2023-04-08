@@ -1,4 +1,4 @@
-package mx.uv.fei.Logic;
+package mx.uv.fei.DataAccess;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import mx.uv.fei.DataAccess.DataBaseManager;
+import mx.uv.fei.Logic.IUser;
+import mx.uv.fei.Logic.User;
 
 public class UserDAO implements IUser{
     
