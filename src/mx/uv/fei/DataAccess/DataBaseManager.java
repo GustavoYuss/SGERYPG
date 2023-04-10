@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author yusgu
+ * @author dany_
  */
 public class DataBaseManager {
     private Connection connection; 
@@ -42,3 +42,4 @@ public class DataBaseManager {
          }
     }
 }
+
