@@ -13,11 +13,11 @@ public class AddTeacherDAO {
     
     public int addUser (User user) throws SQLException{
         int result = 0;
-        int verify = verifyUser(user);
+        int verify = VerifyRegistration(user);
         
         if (verify == 0 && checkEmail(user) == 0) {
             
-            String query = "insert into Usuario(PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, CorreoInstitucional, tipoUsuario) values(?,?,?,?,?)";
+            String query = "insert into Usuario(PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, CorreoInstitucional) values(?,?,?,?)";
             DataBaseManager dataBaseManager = new DataBaseManager();
             Connection connection = dataBaseManager.getConnection();
             PreparedStatement statement = connection.prepareStatement(query);
@@ -26,7 +26,6 @@ public class AddTeacherDAO {
             statement.setString(3, user.getLastName().toUpperCase());
             statement.setString(4, user.getMothersLastName().toUpperCase());
             statement.setString(5, user.getInstitutionalMail().toUpperCase());
-            statement.setInt(6, UserType(user.getTypeUser()));
             result = statement.executeUpdate();
             return result;
             
@@ -36,19 +35,34 @@ public class AddTeacherDAO {
             return result = -1;
         }
     }
-    
-    public int verifyUser(User user) throws SQLException {
+
+    public int addTeacher (User user, String Type) throws SQLException{
         int result = 0;
-        String query = "select * from usuario where correoElectronico = ?";
+        int idUser = getIdUser(user);
+
+        String query = "insert into Docente (claveDocente, idUsuario, idtipodocente) values(?,?)";
+        DataBaseManager dataBaseManager = new DataBaseManager();
+        Connection connection = dataBaseManager.getConnection();
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, user.getKey());
+        if (idUser != -1){
+        statement.setInt(2, idUser);
+        }
+        statement.setInt(3, type(Type));
+        result = statement.executeUpdate();
+        return result;
+    }
+    
+    public int VerifyRegistration (User user) throws SQLException {
+        int result = 0;
+        String query = "select * from Docente where claveDocente = ?";
         DataBaseManager dataBaseManager = new DataBaseManager();
         Connection connection = dataBaseManager.getConnection();
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, user.getInstitutionalMail());
         ResultSet resultSet = statement.executeQuery();
         if (resultSet.next()) {
-            if (resultSet.getString("PrimerNombre").toUpperCase().equals(user.getFirstName()) 
-                    && resultSet.getString("ApellidoPaterno").equals(user.getLastName())
-                            && resultSet.getString("ApellidoMaterno").equals(user.getMothersLastName())){
+            if (resultSet.getString("claveDocente").toUpperCase().equals(user.getKey())){
                 result = 1;
             } else {
                 result = -1;
@@ -71,7 +85,7 @@ public class AddTeacherDAO {
         return result;
     }
 
-    public int UserType(String userType) throws SQLException {
+    public int type(String userType) throws SQLException {
         String query = "select * from Tipousuario where TipoUsuario = ?";
         DataBaseManager dataBaseManager = new DataBaseManager();
         Connection connection = dataBaseManager.getConnection();
@@ -81,6 +95,32 @@ public class AddTeacherDAO {
 
         int idUserType = resultSet.getInt("TipoUsuario");
         return idUserType;
+    }
+
+    public int getIdUser(User user) throws SQLException {
+        int result = 0;
+        String query = "select * from usuario where apellidoPaterno = ?";
+        DataBaseManager dataBaseManager = new DataBaseManager();
+        Connection connection = dataBaseManager.getConnection();
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, user.getLastName());
+
+        ResultSet resultSet = statement.executeQuery();
+        if (resultSet.next()) {
+            if (resultSet.getString("PrimerNombre").toUpperCase().equals(user.getFirstName()) 
+                    && resultSet.getString("ApellidoPaterno").equals(user.getLastName())
+                            && resultSet.getString("ApellidoMaterno").equals(user.getMothersLastName())){
+
+                result = resultSet.getInt("idUsuario");
+
+            } else {
+
+                result = -1;
+
+            }
+        }
+
+        return result;
     }
 
 }

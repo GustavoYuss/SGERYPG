@@ -13,7 +13,7 @@ public class AddStudentDAO implements IUser{
     
     public int addUser (User user) throws SQLException{
         int result = 0;
-        int verify = verifyUser(user);
+        int verify = VerifyRegistration(user);
         
         if (verify == 0 && checkEmail(user) == 0) {
             
@@ -26,7 +26,6 @@ public class AddStudentDAO implements IUser{
             statement.setString(3, user.getLastName().toUpperCase());
             statement.setString(4, user.getMothersLastName().toUpperCase());
             statement.setString(5, user.getInstitutionalMail().toUpperCase());
-            statement.setInt(6, UserType("Alumno"));
             result = statement.executeUpdate();
             return result;
             
@@ -39,28 +38,31 @@ public class AddStudentDAO implements IUser{
 
     public int addStudent (User user, String enrollmentType) throws SQLException{
         int result = 0;
-        String query = "insert into Usuario(Matricula, idUsuario) values(?,?)";
+        int idUser = getIdUser(user);
+
+        String query = "insert into alumno(Matricula, idUsuario, tipoInscripcion) values(?,?)";
         DataBaseManager dataBaseManager = new DataBaseManager();
         Connection connection = dataBaseManager.getConnection();
         PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, enrollmentType);
-        statement.setInt(2, getIdUser(user));
+        statement.setString(1, user.getKey());
+        if (idUser != -1){
+        statement.setInt(2, idUser);
+        }
+        statement.setString(3, enrollmentType);
         result = statement.executeUpdate();
         return result;
     }
     
-    public int verifyUser(User user) throws SQLException {
+    public int VerifyRegistration(User user) throws SQLException {
         int result = 0;
-        String query = "select * from usuario where correoElectronico = ?";
+        String query = "select * from alumno where correoElectronico = ?";
         DataBaseManager dataBaseManager = new DataBaseManager();
         Connection connection = dataBaseManager.getConnection();
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, user.getInstitutionalMail());
         ResultSet resultSet = statement.executeQuery();
         if (resultSet.next()) {
-            if (resultSet.getString("PrimerNombre").toUpperCase().equals(user.getFirstName()) 
-                    && resultSet.getString("ApellidoPaterno").equals(user.getLastName())
-                            && resultSet.getString("ApellidoMaterno").equals(user.getMothersLastName())){
+            if (resultSet.getString("Matricula").toUpperCase().equals(user.getKey())){
                 result = 1;
             } else {
                 result = -1;
@@ -71,11 +73,11 @@ public class AddStudentDAO implements IUser{
 
     public int getIdUser(User user) throws SQLException {
         int result = 0;
-        String query = "select * from usuario where correoElectronico = ?";
+        String query = "select * from usuario where apellidoPaterno = ?";
         DataBaseManager dataBaseManager = new DataBaseManager();
         Connection connection = dataBaseManager.getConnection();
         PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, user.getInstitutionalMail());
+        statement.setString(1, user.getLastName());
 
         ResultSet resultSet = statement.executeQuery();
         if (resultSet.next()) {
@@ -107,18 +109,5 @@ public class AddStudentDAO implements IUser{
         } 
         
         return result;
-    }
-
-    public int UserType(String userType) throws SQLException {
-        String query = "select * from Tipousuario where TipoUsuario = ?";
-        DataBaseManager dataBaseManager = new DataBaseManager();
-        Connection connection = dataBaseManager.getConnection();
-        PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, userType);
-        ResultSet resultSet = statement.executeQuery();
-
-        int idUserType = resultSet.getInt("TipoUsuario");
-        return idUserType;
-    }
-    
+    }    
 }

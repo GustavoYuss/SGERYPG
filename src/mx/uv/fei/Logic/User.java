@@ -9,6 +9,7 @@ public class User {
     private String mothersLastName;
     private String institutionalMail;
     private String typeUser;
+    private String key;
 
     public int getId() {
         return id;
@@ -64,6 +65,14 @@ public class User {
 
     public void setTypeUser(String typeUser) {
         this.typeUser = typeUser;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
 }
