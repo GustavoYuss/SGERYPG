@@ -4,7 +4,9 @@ import java.sql.SQLException;
 
 public interface IUser {
 
-    int addUser (User user, String userType) throws SQLException;
-    int addStudent (User user, String enrollment) throws SQLException;
-    
+    int addUser (User user) throws SQLException;
+    int UserType(String userType) throws SQLException;
+    int checkEmail(User user);
+    int verifyUser(User user) throws SQLException;
+
 }

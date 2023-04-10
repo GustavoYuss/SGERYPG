@@ -12,7 +12,7 @@ public class PreProjectDAO implements IPreProject {
     
     public ArrayList<PreProject> consultPreProjects( ) throws SQLException {
         
-        ArrayList<PreProject> preProjects = new ArrayList();
+        ArrayList<PreProject> preProjects = new ArrayList<PreProject>();
         String query = "Select * from AnteProyectos";
         DataBaseManager dataBaseManager = new DataBaseManager();
         Connection connection = dataBaseManager.getConnection();
@@ -36,10 +36,22 @@ public class PreProjectDAO implements IPreProject {
         return preProjects;
     }
 
-    @Override
     public int addPreProject(PreProject preProject) throws SQLException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addPreProject'");
-    }
+        int result = 0;
+        String query = "insert into Anteproyecto(titulo, nombreTrabajoRecepcional, descripcion, estado, requisitos, modalidad, idLgca, idEstado) values(?,?,?,?,?,?,?,?)";
+        DataBaseManager dataBaseManager = new DataBaseManager();
+        Connection connection = dataBaseManager.getConnection();
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, preProject.getTitle());
+        statement.setString(2, preProject.getNameReceptionWork());
+        statement.setString(3, preProject.getDescription());
+        statement.setString(4, preProject.getStatus());
+        statement.setString(5, preProject.getRequirements());
+        statement.setInt(6, preProject.getModality());
+        statement.setInt(7, preProject.getLGCA());
+        statement.setString(8, preProject.getStatus());
 
+        result = statement.executeUpdate();
+        return result;
+    }
 }

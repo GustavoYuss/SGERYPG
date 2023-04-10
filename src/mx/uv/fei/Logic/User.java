@@ -8,7 +8,7 @@ public class User {
     private String lastName;
     private String mothersLastName;
     private String institutionalMail;
-    private String idTypeUser;
+    private String typeUser;
 
     public int getId() {
         return id;
@@ -58,12 +58,12 @@ public class User {
         this.institutionalMail = institutionalMail;
     }
 
-    public String getIdTypeUser() {
-        return idTypeUser;
+    public String getTypeUser() {
+        return typeUser;
     }
 
-    public void setIdTypeUser(String idTypeUser) {
-        this.idTypeUser = idTypeUser;
+    public void setTypeUser(String typeUser) {
+        this.typeUser = typeUser;
     }
 
 }

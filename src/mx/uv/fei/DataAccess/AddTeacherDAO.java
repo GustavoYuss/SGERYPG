@@ -6,18 +6,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import mx.uv.fei.Logic.IUser;
+
 import mx.uv.fei.Logic.User;
 
-public class UserDAO implements IUser{
+public class AddTeacherDAO {
     
-    public int addUser (User user, String userType) throws SQLException{
+    public int addUser (User user) throws SQLException{
         int result = 0;
         int verify = verifyUser(user);
         
         if (verify == 0 && checkEmail(user) == 0) {
             
-            String query = "insert into Usuario(PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, CorreoInstitucional) values(?,?,?,?,?)";
+            String query = "insert into Usuario(PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, CorreoInstitucional, tipoUsuario) values(?,?,?,?,?)";
             DataBaseManager dataBaseManager = new DataBaseManager();
             Connection connection = dataBaseManager.getConnection();
             PreparedStatement statement = connection.prepareStatement(query);
@@ -26,9 +26,7 @@ public class UserDAO implements IUser{
             statement.setString(3, user.getLastName().toUpperCase());
             statement.setString(4, user.getMothersLastName().toUpperCase());
             statement.setString(5, user.getInstitutionalMail().toUpperCase());
-            if(userType != "Alumno"){
-                statement.setInt(6, UserType(user, userType));
-            }
+            statement.setInt(6, UserType(user.getTypeUser()));
             result = statement.executeUpdate();
             return result;
             
@@ -38,23 +36,7 @@ public class UserDAO implements IUser{
             return result = -1;
         }
     }
-
-    public int addStudent (User user, String enrollment) throws SQLException{
-        int result = 0;
-        String query = "insert into Usuario(Matricula, idUsuario) values(?,?)";
-        DataBaseManager dataBaseManager = new DataBaseManager();
-        Connection connection = dataBaseManager.getConnection();
-        PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, enrollment);
-        statement.setInt(2, user.getId());
-        result = statement.executeUpdate();
-        return result;
-    }
     
-    public int addTeacher (User user) throws SQLException{
-        return 0;
-    }
-
     public int verifyUser(User user) throws SQLException {
         int result = 0;
         String query = "select * from usuario where correoElectronico = ?";
@@ -89,7 +71,7 @@ public class UserDAO implements IUser{
         return result;
     }
 
-    public int UserType(User user, String userType) throws SQLException {
+    public int UserType(String userType) throws SQLException {
         String query = "select * from Tipousuario where TipoUsuario = ?";
         DataBaseManager dataBaseManager = new DataBaseManager();
         Connection connection = dataBaseManager.getConnection();
@@ -100,5 +82,5 @@ public class UserDAO implements IUser{
         int idUserType = resultSet.getInt("TipoUsuario");
         return idUserType;
     }
-    
+
 }
