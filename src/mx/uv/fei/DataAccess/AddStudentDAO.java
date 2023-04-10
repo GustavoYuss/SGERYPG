@@ -44,7 +44,7 @@ public class AddStudentDAO implements IUser{
         Connection connection = dataBaseManager.getConnection();
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, enrollmentType);
-        statement.setInt(2, user.getId());
+        statement.setInt(2, getIdUser(user));
         result = statement.executeUpdate();
         return result;
     }
@@ -66,6 +66,32 @@ public class AddStudentDAO implements IUser{
                 result = -1;
             }
         }
+        return result;
+    }
+
+    public int getIdUser(User user) throws SQLException {
+        int result = 0;
+        String query = "select * from usuario where correoElectronico = ?";
+        DataBaseManager dataBaseManager = new DataBaseManager();
+        Connection connection = dataBaseManager.getConnection();
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, user.getInstitutionalMail());
+
+        ResultSet resultSet = statement.executeQuery();
+        if (resultSet.next()) {
+            if (resultSet.getString("PrimerNombre").toUpperCase().equals(user.getFirstName()) 
+                    && resultSet.getString("ApellidoPaterno").equals(user.getLastName())
+                            && resultSet.getString("ApellidoMaterno").equals(user.getMothersLastName())){
+
+                result = resultSet.getInt("idUsuario");
+
+            } else {
+
+                result = -1;
+
+            }
+        }
+
         return result;
     }
     
