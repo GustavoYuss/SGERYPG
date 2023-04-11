@@ -1,10 +1,8 @@
 package mx.uv.fei.Logic;
-
 import java.sql.SQLException;
 
-public interface IUser {
-
+public interface IAddUser {
+    
     int addUser (User user) throws SQLException;
-    int VerifyRegistration(User user) throws SQLException;
 
 }

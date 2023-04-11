@@ -16,9 +16,9 @@ import java.util.logging.Logger;
  */
 public class DataBaseManager {
     private Connection connection; 
-    private final String DATABASE_NAME = "jdbc:mysql://127.0.0.1/";
-    private final String DATABASE_USER = "" ;
-    private final String DATABASE_PASSWORD = "";
+    private final String DATABASE_NAME = "jdbc:mysql://127.0.0.1/sgerypg";
+    private final String DATABASE_USER = "AdminCongress" ;
+    private final String DATABASE_PASSWORD = "imAdmin@@Congressxx";
    
     
     public Connection getConnection() throws SQLException{
