@@ -3,15 +3,15 @@ package mx.uv.fei.DataAccess;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import mx.uv.fei.Logic.IAddUser;
+
 import mx.uv.fei.Logic.User;
 
-public class AddTeacherDAO implements IAddUser{
+public class TeacherDAO implements IUser{
 
     public int addUser (User user) throws SQLException{
         UserVerifierDAO checker = new UserVerifierDAO();
         int result = 0;
-        int verify = checker.VerifyRegistrationTeacher(user);
+        int verify = checker.verifyRegistrationTeacher(user);
         
         if (verify == 0 && checker.checkEmail(user) == 0) {
             
@@ -39,7 +39,7 @@ public class AddTeacherDAO implements IAddUser{
         UserDAO teacher = new UserDAO();
         int idUser = teacher.getIdUser(user);
         UserVerifierDAO checker = new UserVerifierDAO();
-        int verify = checker.VerifyRegistrationStudent(user);
+        int verify = checker.verifyRegistrationStudent(user);
         int result = 0;
 
         if (verify == 0) {

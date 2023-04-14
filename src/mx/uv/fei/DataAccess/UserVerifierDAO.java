@@ -11,7 +11,7 @@ import mx.uv.fei.Logic.User;
 
 public class UserVerifierDAO {
     
-    public int VerifyRegistrationStudent(User user) throws SQLException {
+    public int verifyRegistrationStudent(User user) throws SQLException {
         int result = 0;
         String query = "select * from alumno where matricula = ?";
         DataBaseManager dataBaseManager = new DataBaseManager();
@@ -29,7 +29,7 @@ public class UserVerifierDAO {
         return result;
     }
 
-    public int VerifyRegistrationTeacher(User user) throws SQLException {
+    public int verifyRegistrationTeacher(User user) throws SQLException {
         int result = 0;
         String query = "select * from Docente where claveDocente = ?";
         DataBaseManager dataBaseManager = new DataBaseManager();

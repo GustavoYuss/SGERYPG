@@ -4,15 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import mx.uv.fei.Logic.IAddUser;
 import mx.uv.fei.Logic.User;
 
-public class AddStudentDAO implements IAddUser{
+public class StudentDAO implements IUser{
 
     public int addUser (User user) throws SQLException{
         UserVerifierDAO checker = new UserVerifierDAO();
         int result = 0;
-        int verify = checker.VerifyRegistrationStudent(user);
+        int verify = checker.verifyRegistrationStudent(user);
         
         if (verify == 0 && checker.checkEmail(user) == 0) {
             
@@ -39,7 +38,7 @@ public class AddStudentDAO implements IAddUser{
     public int addStudent (User user, String enrollmentType) throws SQLException{
         UserDAO student = new UserDAO();
         UserVerifierDAO checker = new UserVerifierDAO();
-        int verify = checker.VerifyRegistrationStudent(user);
+        int verify = checker.verifyRegistrationStudent(user);
         int result = 0;
 
         if (verify == 0) {

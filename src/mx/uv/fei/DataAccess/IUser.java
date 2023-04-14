@@ -1,7 +1,9 @@
-package mx.uv.fei.Logic;
+package mx.uv.fei.DataAccess;
 import java.sql.SQLException;
 
-public interface IAddUser {
+import mx.uv.fei.Logic.User;
+
+public interface IUser {
     
     int addUser (User user) throws SQLException;
 
