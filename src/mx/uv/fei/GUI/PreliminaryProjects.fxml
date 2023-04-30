@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="txtNameResearchProject" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #16171c;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.Controllers.PreliminaryProjectsController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-7.0" layoutY="-14.0" prefHeight="715.0" prefWidth="276.0" style="-fx-background-color: #1e1f27;" stylesheets="@useregister.css">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="107.0" layoutX="100.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" translateY="40.0" x="100.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="70.0" right="85.0" top="45.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../images/Usuario.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="-20.0" prefHeight="42.0" prefWidth="114.0" text="Director" textFill="WHITE" translateY="50.0">
+               <VBox.margin>
+                  <Insets left="75.0" right="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Dubai Regular" size="23.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="275.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="AnteProyectos" textAlignment="JUSTIFY" textFill="#998d8d" translateY="50.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="15.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="275.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Propuestas" textFill="#998d8d" translateY="50.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-18.0">
+                     <image>
+                        <Image url="@../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="282.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Entregables" textFill="#998d8d" translateY="100.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-17.0">
+                     <image>
+                        <Image url="@../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="274.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Revisiones" textFill="#998d8d" translateY="100.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="butExit" layoutX="19.0" layoutY="388.0" mnemonicParsing="false" onAction="#logOut" prefHeight="42.0" prefWidth="248.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Cerrar Sesión" textFill="#998d8d" translateX="10.0" translateY="150.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-21.0">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="14.0" />
+               </padding>
+            </Button>
+            <Button layoutX="19.0" layoutY="283.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="275.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Alumnos" textFill="#998d8d" translateY="-100.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-26.0">
+                     <image>
+                        <Image url="@../images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="528.0" layoutY="20.0" text="Registro de anteproyecto" textFill="#f7f5f5">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="304.0" layoutY="58.0" prefHeight="12.0" prefWidth="758.0" />
+      <ScrollPane layoutX="304.0" layoutY="89.0" prefHeight="610.0" prefWidth="774.0" style="-fx-border-color: #17202A;" stylesheets="@useregister.css">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1667.0" prefWidth="760.0" style="-fx-background-color: #16171c; -fx-border-color: #16171c;" styleClass="Pane" stylesheets="@useregister.css">
+               <children>
+                  <Pane layoutX="19.0" layoutY="26.0" prefHeight="817.0" prefWidth="718.0" style="-fx-background-radius: 10px; -fx-background-color: #242430;" styleClass="Pane" stylesheets="@useregister.css">
+                     <children>
+                        <Text fill="#e7e7e7" fontSmoothingType="LCD" layoutX="21.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del proyecto de Investigacion " textAlignment="CENTER" wrappingWidth="393.5999511718751">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#e7e7e7" fontSmoothingType="LCD" layoutX="68.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuerpo Academico" textAlignment="CENTER" wrappingWidth="187.20003356933603">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="423.0" layoutY="114.0" text="LGAC que alimenta" textFill="#f4eaea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="34.0" layoutY="215.0" prefHeight="30.0" prefWidth="221.0" text="Línea de Investigación" textFill="#f4eaea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtaLineResearch" layoutX="21.0" layoutY="259.0" prefHeight="132.0" prefWidth="664.0" styleClass="Pane" stylesheets="@useregister.css" />
+                        <Label layoutX="22.0" layoutY="418.0" prefHeight="30.0" prefWidth="173.0" text="Duracion(Meses):" textFill="#f4eaea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDuration" layoutX="197.0" layoutY="422.0" prefHeight="26.0" prefWidth="42.0" style="-fx-background-color: white;" />
+                        <Label layoutX="288.0" layoutY="418.0" prefHeight="30.0" prefWidth="337.0" text="Modalidad del Trabajo Recepcional" textFill="#f4eaea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="522.0" prefHeight="30.0" prefWidth="315.0" text="Nombre del Trabajo Recepcional" textFill="#f4eaea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNameTR" layoutX="22.0" layoutY="564.0" prefHeight="38.0" prefWidth="669.0" style="-fx-background-color: white;" />
+                        <Label layoutX="22.0" layoutY="615.0" prefHeight="30.0" prefWidth="282.0" text="Requisitos del Anteproyecto" textFill="#f4eaea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtPreprojectRequirements" layoutX="17.0" layoutY="658.0" prefHeight="132.0" prefWidth="674.0" />
+                        <ComboBox fx:id="cboAcademicStaff" layoutX="31.0" layoutY="158.0" prefHeight="43.0" prefWidth="297.0" />
+                        <ComboBox fx:id="cboLGAC" layoutX="376.0" layoutY="158.0" prefHeight="43.0" prefWidth="291.0" />
+                        <ComboBox fx:id="cboModalityTR" layoutX="269.0" layoutY="462.0" prefHeight="34.0" prefWidth="412.0" />
+                        <TextField fx:id="txtaNameResearchProject" layoutX="29.0" layoutY="58.0" prefHeight="38.0" prefWidth="653.0" style="-fx-background-color: white;" styleClass="Pane" stylesheets="@useregister.css" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="19.0" layoutY="863.0" prefHeight="291.0" prefWidth="718.0" style="-fx-background-color: #242430; -fx-background-radius: 10px;" styleClass="Pane" stylesheets="@useregister.css">
+                     <children>
+                        <Label layoutX="155.0" layoutY="14.0" text="Responsable del Trabajo Recepcional" textFill="#f7f5f5">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="69.0" text="Director" textFill="#f4eaea">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="53.0" layoutY="122.0" prefHeight="154.0" prefWidth="625.0" style="-fx-background-color: #2d313b; -fx-background-radius: 10px;">
+                           <children>
+                              <Label layoutX="220.0" layoutY="-1.0" prefHeight="30.0" prefWidth="185.0" text="Otros responsables" textFill="#f4eaea">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="21.0" layoutY="54.0" text="Profesor" textFill="#f4eaea">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="70.0" layoutY="95.0" text="Rol" textFill="#f4eaea">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="34.0" layoutY="29.0" prefHeight="12.0" prefWidth="577.0" />
+                              <Button fx:id="butAddResponsible" layoutX="429.0" layoutY="102.0" mnemonicParsing="false" onAction="#addPreliminaryProjectResponsibles" prefHeight="32.0" prefWidth="159.0" style="-fx-background-color: #381DDB;" styleClass="pane-con-sombra" stylesheets="@useregister.css" text="Agregar responsable" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Button>
+                              <ComboBox fx:id="cboRole" layoutX="117.0" layoutY="96.0" prefHeight="25.0" prefWidth="218.0" />
+                              <ComboBox fx:id="cboTeacher" layoutX="117.0" layoutY="54.0" prefHeight="27.0" prefWidth="378.0" />
+                              <Label layoutX="509.0" layoutY="58.0" text="Cupo: " textFill="#f7f4f4" />
+                              <Label fx:id="lbCount" layoutX="547.0" layoutY="59.0" text="4" textFill="#efecec" />
+                           </children>
+                        </Pane>
+                        <ComboBox fx:id="cboDirector" layoutX="143.0" layoutY="71.0" prefHeight="26.0" prefWidth="412.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="19.0" layoutY="1173.0" prefHeight="474.0" prefWidth="718.0" style="-fx-background-color: #242430; -fx-background-radius: 10px;" stylesheets="@useregister.css">
+                     <children>
+                        <Label layoutX="47.0" layoutY="24.0" text="DESCRIPCIÓN DEL PROYECTO DE INV." textFill="#f7f5f5">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtaDescriptionPI" layoutX="14.0" layoutY="51.0" prefHeight="230.0" prefWidth="334.0" />
+                        <TextArea fx:id="txtaDescriptionTR" layoutX="362.0" layoutY="51.0" prefHeight="230.0" prefWidth="334.0" />
+                        <Label layoutX="416.0" layoutY="24.0" text=" DESCRIPCIÓN DEL TRABAJO R. " textFill="#f7f5f5">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="297.0" text=" RESULTADOS ESPERADOS." textFill="#f7f5f5">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtaExpectedResults" layoutX="14.0" layoutY="324.0" prefHeight="113.0" prefWidth="468.0" />
+                        <Button fx:id="butRegister" layoutX="503.0" layoutY="362.0" mnemonicParsing="false" onAction="#registerPreliminaryProject" style="-fx-background-color: #381DDB;" styleClass="pane-con-sombra" stylesheets="@useregister.css" text="Registrar Anteproyecto" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="pane-con-sombra" />
+                        <String fx:value="Pane" />
+                     </styleClass>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -8,7 +8,11 @@ public class User {
     private String lastName;
     private String mothersLastName;
     private String institutionalMail;
+<<<<<<< Updated upstream
     private String typeUser;
+=======
+    private int typeUser;
+>>>>>>> Stashed changes
     private String key;
 
     public int getId() {
@@ -59,11 +63,19 @@ public class User {
         this.institutionalMail = institutionalMail;
     }
 
+<<<<<<< Updated upstream
     public String getTypeUser() {
         return typeUser;
     }
 
     public void setTypeUser(String typeUser) {
+=======
+    public int getTypeUser() {
+        return typeUser;
+    }
+
+    public void setTypeUser(int typeUser) {
+>>>>>>> Stashed changes
         this.typeUser = typeUser;
     }
 

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SGERYPG">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/SGERYPG.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/C:/Users/Migue/Documents/GitHub/SGERYPG/src/sgerypg/SGERYPG.java</file>
+=======
+            <file>file:/C:/Users/Migue/Documents/GitHub/SGERYPG/test/mx/uv/fei/DataAccess/PreliminaryProjectDAOTest.java</file>
+            <file>file:/C:/Users/Migue/Documents/GitHub/SGERYPG/src/sgerypg/sgerypg.java</file>
+            <file>file:/C:/Users/Migue/Documents/GitHub/SGERYPG/src/mx/uv/fei/Controllers/PreliminaryProjectsController.java</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>

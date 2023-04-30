@@ -1,0 +1,78 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.left-form{
+    -fx-background-color:linear-gradient(to bottom right, #05071f, #060927); 
+}
+
+.rigth-form{
+    -fx-background-color:linear-gradient(to bottom,  #02030A, #144552);
+}
+
+.left-form-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand; 
+}
+
+.left-form-btn:pressed{
+    -fx-background-color : linear-gradient(to bottom, #2d313b, #6958ca);
+    
+    -fx-cursor: hand;
+} 
+
+#tblUsers .table-column{
+    -fx-alignment: CENTER;
+}
+
+.btn{
+    -fx-background-color: linear-gradient(to bottom, #028090, #02c39a);
+    -fx-cursor: hand; 
+}
+
+.btn:pressed{
+    -fx-background-color: linear-gradient(to bottom, #1b3a4b, #006466);
+    -fx-cursor: hand;
+} 
+
+.ScrollPanel {
+    -fx-background-color: linear-gradient(to bottom, #028090, #02c39a);
+}
+
+.scroll-pane {
+    -fx-background-color: #02030A;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color:  #1e1f27;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: black;
+}
+
+.Pane {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.8), 10, 0.5, 0.3, 8);
+}
+
+.pane-con-sombra {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 0, 3);
+}

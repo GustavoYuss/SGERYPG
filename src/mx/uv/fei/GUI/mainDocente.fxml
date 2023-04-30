@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="-23.0" prefHeight="723.0" prefWidth="276.0" styleClass="left-form" stylesheets="@useregister.css">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="107.0" layoutX="100.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" translateY="40.0" x="100.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="70.0" right="85.0" top="45.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../images/Usuario.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="-20.0" prefHeight="42.0" prefWidth="114.0" text="Director" textFill="WHITE" translateY="50.0">
+               <VBox.margin>
+                  <Insets left="75.0" right="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Dubai Regular" size="23.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="252.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="AnteProyectos" textFill="WHITE" translateX="43.0" translateY="50.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="15.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="92.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="209.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Propuestas" textFill="WHITE" translateX="38.0" translateY="50.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="105.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="204.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Entregables" textFill="WHITE" translateX="-17.0" translateY="100.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="167.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Revisiones" textFill="WHITE" translateX="12.0" translateY="100.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="5.0" right="60.0" />
+               </padding>
+            </Button>
+            <Button layoutX="19.0" layoutY="388.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="341.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Cerrar Sesión" textFill="WHITE" translateX="10.0" translateY="150.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="5.0" right="60.0" />
+               </padding>
+            </Button>
+            <Button layoutX="19.0" layoutY="283.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="198.0" styleClass="left-form-btn" stylesheets="@useregister.css" text="Alumnos" textFill="WHITE" translateX="31.0" translateY="-100.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="105.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="276.0" layoutY="-11.0" prefHeight="711.0" prefWidth="826.0" style="-fx-background-color: #02030a;">
+         <children>
+            <Label layoutX="299.0" layoutY="29.0" prefHeight="35.0" prefWidth="207.0" text="Anteproyectos" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Label>
+            <Separator layoutX="31.0" layoutY="82.0" prefHeight="1.0" prefWidth="778.0" style="-fx-background-image: red;" />
+            <TableView layoutX="44.0" layoutY="232.0" prefHeight="368.0" prefWidth="738.0">
+              <columns>
+                <TableColumn prefWidth="151.20004272460938" text="Titulo del AnteProyecto" />
+                <TableColumn prefWidth="194.933349609375" text="Nombre del trabajo recepcional" />
+                  <TableColumn prefWidth="84.79998779296875" text="Estado" />
+                  <TableColumn prefWidth="99.2000732421875" text="Modalidad" />
+                  <TableColumn prefWidth="102.933349609375" text="Estado" />
+                  <TableColumn prefWidth="102.39999999999998" text="Rol" />
+              </columns>
+            </TableView>
+            <Label layoutX="44.0" layoutY="148.0" prefHeight="18.0" prefWidth="146.0" text="Filtrar por Rol: " textFill="#faf3f3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="197.0" layoutY="144.0" prefHeight="35.0" prefWidth="265.0" />
+            <Button layoutX="494.0" layoutY="139.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="Filtrar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="50.0" layoutY="637.0" mnemonicParsing="false" onAction="#openStudentRegistration" prefHeight="40.0" prefWidth="150.0" styleClass="btn" stylesheets="@useregister.css" text="Nueva Propuesta" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="222.0" layoutY="637.0" mnemonicParsing="false" onAction="#exitGroupsDetails" prefHeight="40.0" prefWidth="149.0" styleClass="btn" stylesheets="@useregister.css" text="Ver Detalles" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

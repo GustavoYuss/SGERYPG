@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="721.0" prefWidth="1153.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.controllers.GroupDetailsController">
+   <children>
+      <Pane prefHeight="721.0" prefWidth="1155.0" style="-fx-background-color: #000000;">
+         <children>
+            <Pane layoutX="266.0" prefHeight="722.0" prefWidth="878.0" style="-fx-background-color: #02030a; -fx-background-radius: 10PX;">
+               <children>
+                  <Label layoutX="356.0" layoutY="21.0" prefHeight="35.0" prefWidth="184.0" text="Detalles Curso" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;lbTitleNameEE&quot;" layoutX="45.0" layoutY="146.0" prefHeight="21.0" prefWidth="87.0" text="Doncente:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;lbTitleSchoolPeriod&quot;" layoutX="48.0" layoutY="194.0" text="Periodo Escolar:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;lbTitleNrc&quot;" layoutX="450.0" layoutY="99.0" text="NRC:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;idTitleCapacity&quot;" layoutX="448.0" layoutY="146.0" text="Cupo:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;idTitleSection&quot;" layoutX="448.0" layoutY="194.0" text="Seccion:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblEnrolledStudents" layoutX="34.0" layoutY="310.0" prefHeight="303.0" prefWidth="810.0" style="-fx-background-color: #02030A;">
+                    <columns>
+                      <TableColumn fx:id="colName" prefWidth="146.39996337890625" text="Nombres" />
+                      <TableColumn fx:id="colLastName" prefWidth="164.5333251953125" text="Apellido Paterno" />
+                        <TableColumn fx:id="colMotherLastName" prefWidth="154.93328857421875" text="Apellido Materno" />
+                        <TableColumn fx:id="colKey" prefWidth="116.53326416015625" text="Matricula" />
+                        <TableColumn fx:id="colInstitutionalMail" prefWidth="235.4666748046875" text="Correo Institucional" />
+                    </columns>
+                  </TableView>
+                  <Pane layoutX="32.0" layoutY="62.0" prefHeight="3.0" prefWidth="817.0" style="-fx-background-color: white;" />
+                  <Label id="&quot;lbNameEE&quot;" fx:id="lbEducationalExperience" layoutX="240.0" layoutY="99.0" prefHeight="20.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;lbSchoolPeriod&quot;" fx:id="lbNRCLabel" layoutX="506.0" layoutY="100.0" prefHeight="20.0" prefWidth="174.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;lbNrc&quot;" fx:id="lbTeacherLabel" layoutX="138.0" layoutY="147.0" prefHeight="20.0" prefWidth="110.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;idCapacity&quot;" fx:id="ibSchoolPeriodLabel" layoutX="192.0" layoutY="194.0" prefHeight="20.0" prefWidth="220.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;idSection&quot;" fx:id="lbSlotsLabel" layoutX="517.0" layoutY="147.0" prefHeight="20.0" prefWidth="122.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;lbTitleNameEE&quot;" layoutX="47.0" layoutY="98.0" text="Experiencia Educativa:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label id="&quot;idSection&quot;" fx:id="lbSectionLabel" layoutX="540.0" layoutY="195.0" prefHeight="20.0" prefWidth="140.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="262.0" prefHeight="35.0" prefWidth="163.0" text="Alumnos Inscritos" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="24.0" layoutY="296.0" prefHeight="3.0" prefWidth="823.0" style="-fx-background-color: white;" />
+                  <Button layoutX="540.0" layoutY="653.0" mnemonicParsing="false" onAction="#openStudentRegistration" prefHeight="40.0" prefWidth="150.0" styleClass="btn" stylesheets="@useregister.css" text="Inscribir Alumno" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="712.0" layoutY="653.0" mnemonicParsing="false" onAction="#exitGroupsDetails" prefHeight="40.0" prefWidth="132.0" styleClass="btn" stylesheets="@useregister.css" text="Salir" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <VBox layoutX="-8.0" layoutY="-1.0" prefHeight="722.0" prefWidth="276.0" styleClass="left-form" stylesheets="@useregister.css">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="70.0" right="85.0" top="45.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../images/Usuario.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="-20.0" prefHeight="42.0" prefWidth="214.0" text="Administrador" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="75.0" right="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Dubai Regular" size="23.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" styleClass="left-form-btn" stylesheets="@useregister.css" text=" Grupos" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="15.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="92.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" styleClass="left-form-btn" stylesheets="@useregister.css" text=" Cursos" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="105.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" styleClass="left-form-btn" stylesheets="@useregister.css" text=" Trabajos recepcionales    " textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" styleClass="left-form-btn" stylesheets="@useregister.css" text=" Cerrar sesión  " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="5.0" right="60.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
