@@ -1,0 +1,46 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.left-form{
+    -fx-background-color:linear-gradient(to bottom right, #05071F, #060927);
+}
+
+.rigth-form{
+    -fx-background-color:linear-gradient(to bottom,  #02030A, #144552);
+}
+
+.left-form-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand; 
+}
+
+.btn{
+    -fx-background-color: linear-gradient(to bottom, #028090, #02c39a);
+    -fx-cursor: hand; 
+}
+
+.btn:pressed{
+    -fx-background-color: linear-gradient(to bottom, #1b3a4b, #006466);
+    -fx-cursor: hand;
+}    
+
+#tblUsers .table-column{
+    -fx-alignment: CENTER;
+}
+
+.textfield{
+    -fx-background-color: linear-gradient(to bottom, #adb5bd, #eee);
+    -fx-background-radius:4px;
+    -fx-border-color:#1b3a4b;
+    -fx-border-width:.4px;
+    -fx-border-radius:4px;
+}
+
+.textfield:focused{
+    -fx-background-color:#eee;
+}
