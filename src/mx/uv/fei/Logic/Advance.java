@@ -9,59 +9,49 @@ package mx.uv.fei.Logic;
  * @author yusgu
  */
 public class Advance {
-    private int id;
+    private int idAdvance;
     private String title;
     private String description;
-    private String duetodate;
-    private int idstudent;
-    private int idtrabajorecepcional;
+    private int idStudent;
+    private int idReceptionWork;
 
-    public void setId(int id) {
-        this.id = id;
+    public int getIdAdvance() {
+        return idAdvance;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setDuetodate(String duetodate) {
-        this.duetodate = duetodate;
-    }
-
-    public void setIdstudent(int idstudent) {
-        this.idstudent = idstudent;
-    }
-
-    public void setIdtrabajorecepcional(int idtrabajorecepcional) {
-        this.idtrabajorecepcional = idtrabajorecepcional;
-    }
-
-    public int getId() {
-        return id;
+    public void setIdAdvance(int idAdvance) {
+        this.idAdvance = idAdvance;
     }
 
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
     }
 
-    public String getDuetodate() {
-        return duetodate;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public int getIdstudent() {
-        return idstudent;
+    public int getIdStudent() {
+        return idStudent;
     }
 
-    public int getIdtrabajorecepcional() {
-        return idtrabajorecepcional;
+    public void setIdStudent(int idStudent) {
+        this.idStudent = idStudent;
     }
-        
+
+    public int getIdReceptionWork() {
+        return idReceptionWork;
+    }
+
+    public void setIdReceptionWork(int idReceptionWork) {
+        this.idReceptionWork = idReceptionWork;
+    }
 }

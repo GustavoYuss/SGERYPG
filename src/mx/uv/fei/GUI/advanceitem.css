@@ -1,0 +1,29 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.Advance-description{
+    -fx-background-color: transparent;
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-control-inner-background: #537FE7;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
